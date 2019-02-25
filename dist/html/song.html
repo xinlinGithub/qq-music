@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">                      
+    <!-- 用来适配移动端窗口大小 且双击后不会缩放扩大 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>music</title>
+    <link rel="stylesheet" href="../css/self.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="song-img">
+            <div class="img-wrapper">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="song-infor">
+            <!-- 根据所选歌曲动态渲染 -->
+        </div>
+        <div class="pro-wrapper">
+            <div class="star-time">00:00</div>
+            <div class="pro">
+                <div class="pro-bottom"></div>
+                <div class="pro-top">
+                    <!-- 覆盖到上面的一层进度条 -->
+                    <div class="pro-pointer"></div>
+                </div>
+            </div>
+            <!-- 时间也是动态渲染上去的 -->
+            <div class="all-time">04:00</div>
+        </div>
+        <div class="control">
+            <div class="btn-wrapper like-btn"></div>
+            <div class="btn-wrapper pre-btn"></div>
+            <div class="btn-wrapper play-btn"></div>
+            <div class="btn-wrapper next-btn"></div>
+            <div class="btn-wrapper list-btn"></div>
+        </div>
+        <!-- 歌曲信息 动态渲染 -->
+        <div class="lrcWrapper">
+            <!-- <div class="top"></div> -->
+            <ul class="lrc">
+            </ul>
+            <!-- <div class="bottom"></div> -->
+        </div>
+    </div>
+    <!-- 解决移动端300ms延迟问题 -->
+    <script src="../js/fastclick.js"></script>
+    <!-- zepto pc端的jquery 轻量级 便捷 -->
+    <script src="../js/zepto.js"></script>
+    <!-- 高斯模糊函数 把歌曲对应的图片 高斯模糊到body上 -->
+    <script src="../js/gaussBlur.js"></script>
+    
+    <!--  控制歌曲切换时的索引变化 -->
+    <script src="../js/controlManager.js"></script>
+    <!--  控制歌曲的播放情况 -->
+    <script src="../js/audioManage.js"></script>
+    <!-- 控制进度条的变化 -->
+    <script src="../js/processer.js"></script>
+    <!-- 渲染底部歌曲列表 -->
+    <script src="../js/randerList.js"></script>   
+     <!--渲染歌曲的基本信息  -->
+    <script src="../js/rander.js"></script>
+    <!-- 事先请求歌词 -->
+    <script src="../js/requestLrc.js"></script>
+    <!-- 渲染歌词的 -->
+    <script src="../js/randerLrc.js"></script> 
+    <!--主入口文件 进行主要逻辑操作获取数据等  -->
+    <script src="../js/index.js"></script>
+</body>
+</html>
